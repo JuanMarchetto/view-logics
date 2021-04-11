@@ -1,0 +1,36 @@
+{
+  "name": "view-logics",
+  "version": "0.0.9",
+  "description": "This library aims to simplify conditional rendering logics.",
+  "keywords": [
+    "simplify",
+    "conditional",
+    "rendering",
+    "logics"
+  ],
+  "author": "Juan Patricio Marchetto",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JuanMarchetto/view-logics.git"
+  },
+  "bugs": {
+    "url": "https://github.com/JuanMarchetto/view-logics/issues"
+  },
+  "homepage": "https://github.com/JuanMarchetto/view-logics#readme",
+  "devDependencies": {
+    "@babel/core": "^7.7.5",
+    "@babel/preset-env": "^7.7.6",
+    "@babel/preset-react": "^7.7.4",
+    "babel-loader": "^8.0.6",
+    "css-loader": "^3.3.0",
+    "style-loader": "^1.0.1",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10"
+  },
+  "main": "./build/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  }
+}
