@@ -1,6 +1,6 @@
 {
   "name": "view-logics",
-  "version": "0.0.9",
+  "version": "0.1.0",
   "description": "This library aims to simplify conditional rendering logics.",
   "keywords": [
     "simplify",
