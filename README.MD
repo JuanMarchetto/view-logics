@@ -94,7 +94,7 @@ import { times } from "view-logics";
 const Rate = ({ stars }) => times(
     [
         [2, <Line />]
-        [5, <strong>*</strong>]
+        [stars, <strong>*</strong>]
         [2, <Line />]
     ]
 );
