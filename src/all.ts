@@ -1,0 +1,1 @@
+export const all = (conditions) => conditions.reduce(((acc,condition)=> acc && condition),true);

@@ -2,6 +2,37 @@
 This library introduce some helpers to simplify conditional rendering logic in React. 
 Is heavily inspired in the classNames library and in the Rust programing languaje.
 
+## when
+Recive an array of [condition, component] pairs and returns a view containing all the components wich paired conditions are trues
+
+### A React Component with conditional rendering parts
+```JSX
+const Home = ({ showNav, content, searchEnabled }) => (
+  <>
+    {showNav && <Nav />}
+    {searchEnabled && content && <SearchBar content={content} />}
+    {content ? <Cards content={content} /> : <Error />}
+  </>
+);
+
+export default Home;
+```
+
+### The Same Component Using when
+```JSX
+import { when } from "view-logics";
+
+const Home = ({ showNav, content, searchEnabled }) =>
+  when([
+    [showNav, <Nav />],
+    [searchEnabled && content, <SearchBar content={content} />],
+    [content, <Cards content={content} />],
+    [!content, <Error />],
+  ]);
+
+export default Home;
+```
+
 ## match
 Recive an array of [condition, component] pairs and returns a view containing the first component wich paired condition is true.
 
@@ -34,37 +65,6 @@ const Number = ({ number }) =>
   ]);
 
 export default Number;
-```
-
-## when
-Recive an array of [condition, component] pairs and returns a view containing all the components wich paired conditions are trues
-
-### A React Component with conditional rendering parts
-```JSX
-const Home = ({ showNav, content, searchEnabled }) => (
-  <>
-    {showNav && <Nav />}
-    {searchEnabled && content && <SearchBar content={content} />}
-    {content ? <Cards content={content} /> : <Error />}
-  </>
-);
-
-export default Home;
-```
-
-### The Same Component Using when
-```JSX
-import { when } from "view-logics";
-
-const Home = ({ showNav, content, searchEnabled }) =>
-  when([
-    [showNav, <Nav />],
-    [searchEnabled && content, <SearchBar content={content} />],
-    [content, <Cards content={content} />],
-    [!content, <Error />],
-  ]);
-
-export default Home;
 ```
 
 ## times
@@ -100,4 +100,13 @@ const Rate = ({ stars }) => times(
 );
 
 export default Rate;
+```
+
+## all
+Recive an array of [ conditions ] and returns a boolean if al conditions are trusy values
+
+```JSX
+import { all } from "view-logics";
+
+const consitions = [ condidition1, condition2, condition3 ]
 ```
