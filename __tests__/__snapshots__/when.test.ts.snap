@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`first true condition acompanion component should render 1`] = `
+Array [
+  <a
+    href="http://www.url.com"
+  >
+    Link
+  </a>,
+]
+`;
+
+exports[`should render all component wich paired condition evaluates to true 1`] = `
+Array [
+  <p>
+    ups somethings if wrong
+  </p>,
+  <a
+    href="http://www.url.com"
+  >
+    Link
+  </a>,
+]
+`;
+
+exports[`shouldn't render anything when condition evaluates to false 1`] = `Array []`;
+
+exports[`the given component should be render when this paires condition evaluates to true 1`] = `
+Array [
+  <a
+    href="http://www.url.com"
+  >
+    Link
+  </a>,
+]
+`;

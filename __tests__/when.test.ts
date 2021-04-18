@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { match } from '../src/match';
+import { when } from '../src/when';
 
 const component = renderer.create(
     <a href="http://www.url.com">Link</a>,
@@ -11,12 +11,12 @@ const otherComponent = renderer.create(
   );
 
 test('the given component should be render when this paires condition evaluates to true', () => {
-  const tree = match([[true,component]]);
+  const tree = when([[true,component]]);
   expect(tree).toMatchSnapshot();
 });
 
 test('first true condition acompanion component should render', () => {
-    const tree = match([
+    const tree = when([
         [false, otherComponent],
         [false, otherComponent],
         [true,component]
@@ -25,6 +25,17 @@ test('first true condition acompanion component should render', () => {
 });
   
 test("shouldn't render anything when condition evaluates to false", () => {
-    const tree = match([[false,component]]);
+    const tree = when([[false,component]]);
     expect(tree).toMatchSnapshot();
+});
+
+
+test('should render all component wich paired condition evaluates to true', () => {
+  const tree = when([
+      [true, otherComponent],
+      [false, otherComponent],
+      [false,component],
+      [true,component]
+  ]);
+  expect(tree).toMatchSnapshot();
 });

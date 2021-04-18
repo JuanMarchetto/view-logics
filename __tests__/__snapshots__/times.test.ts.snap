@@ -1,0 +1,75 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components should render numer of times indicated in the firs memerb of each pair 1`] = `
+Array [
+  Array [
+    <p>
+      ups somethings if wrong
+    </p>,
+    <p>
+      ups somethings if wrong
+    </p>,
+    <p>
+      ups somethings if wrong
+    </p>,
+    <p>
+      ups somethings if wrong
+    </p>,
+    <p>
+      ups somethings if wrong
+    </p>,
+  ],
+  Array [
+    <a
+      href="http://www.url.com"
+    >
+      Link
+    </a>,
+    <a
+      href="http://www.url.com"
+    >
+      Link
+    </a>,
+  ],
+  Array [
+    <p>
+      ups somethings if wrong
+    </p>,
+    <p>
+      ups somethings if wrong
+    </p>,
+    <p>
+      ups somethings if wrong
+    </p>,
+    <p>
+      ups somethings if wrong
+    </p>,
+  ],
+]
+`;
+
+exports[`first true condition acompanion component should render 1`] = `
+Array [
+  Array [
+    <a
+      href="http://www.url.com"
+    >
+      Link
+    </a>,
+  ],
+]
+`;
+
+exports[`shouldn't render anything when condition evaluates to false 1`] = `Array []`;
+
+exports[`the given component should be render when this paires condition evaluates to true 1`] = `
+Array [
+  Array [
+    <a
+      href="http://www.url.com"
+    >
+      Link
+    </a>,
+  ],
+]
+`;
