@@ -3,5 +3,5 @@ __tests__/
 node_modules
 package-lock.json
 .babelrc
-tsconfig-json
-webpack.config.js 
+tsconfig.json
+webpack.config.js
