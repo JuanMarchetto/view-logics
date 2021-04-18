@@ -28,3 +28,26 @@ test("shouldn't render anything when condition evaluates to false", () => {
     const tree = match([[false,component]]);
     expect(tree).toMatchSnapshot();
 });
+
+test("should render the negative case if is defined when condition evaluates to false", () => {
+  const tree = match([[false, otherComponent, component]]);
+  expect(tree).toMatchSnapshot();
+});
+
+test("should'nt render element after match case true", () => {
+  const tree = match([
+    [true, component],
+    [true, otherComponent]
+  ]);
+  expect(tree).toMatchSnapshot();
+});
+
+
+test("should'nt render element after match case false", () => {
+  const tree = match([
+    [false, otherComponent, component],
+    [true, otherComponent]
+  ]);
+  expect(tree).toMatchSnapshot();
+});
+

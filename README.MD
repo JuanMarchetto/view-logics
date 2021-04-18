@@ -3,7 +3,8 @@ This library introduce some helpers to simplify conditional rendering logic in R
 Is heavily inspired in the classNames library and in the Rust programing languaje.
 
 ## when
-Recive an array of [condition, component] pairs and returns a view containing all the components wich paired conditions are trues
+Recive an array of [condition, component, alternativeComponent?] and returns a view containing all the components wich paired conditions are trues, and, if is set, the alternativeComponent of the conditions
+that evalute to false
 
 ### A React Component with conditional rendering parts
 ```JSX
@@ -26,15 +27,15 @@ const Home = ({ showNav, content, searchEnabled }) =>
   when([
     [showNav, <Nav />],
     [searchEnabled && content, <SearchBar content={content} />],
-    [content, <Cards content={content} />],
-    [!content, <Error />],
+    [content, <Cards content={content} />, <Error />],
   ]);
 
 export default Home;
 ```
 
 ## match
-Recive an array of [condition, component] pairs and returns a view containing the first component wich paired condition is true.
+Recive an array of [condition, component, alternativeComponent?] and returns a view containing the first component wich paired condition is true or the first alternativeComponent(if is defined) wich condition
+is false.
 
 ### A React Component with conditional rendering parts
 ```JSX
@@ -60,15 +61,14 @@ import { match } from "view-logics";
 const Number = ({ number }) =>
   match([
     [number < 0, <Negative number={number} />],
-    [number % 2 === 0, <Pair number={number} />],
-    [true, <Odd number={number} />],
+    [number % 2 === 0, <Pair number={number} />, <Odd number={number} />],
   ]);
 
 export default Number;
 ```
 
 ## times
-Recive an array of [cuantity | condition, component] pairs and returns a view containing the components n times the cuantity if is a Number or once if is a trusy value.
+Recive an array of [cuantity | condition, component, alternativeComponent?] and returns a view containing the components n times the cuantity if is a Number or once if is a trusy value or the alternativeComponent if is defined and his condition evaluate to false.
 
 ### A React Component with conditional rendering parts
 ```JSX

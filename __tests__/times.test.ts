@@ -37,3 +37,13 @@ test('components should render numer of times indicated in the firs memerb of ea
   ]);
   expect(tree).toMatchSnapshot();
 });
+
+
+test("should alternate element in case is false", () => {
+  const tree = times([
+    [5, otherComponent],
+    [false, otherComponent, component],
+    [4, otherComponent],
+]);
+  expect(tree).toMatchSnapshot();
+});

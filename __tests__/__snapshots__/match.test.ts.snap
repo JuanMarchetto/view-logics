@@ -8,6 +8,30 @@ exports[`first true condition acompanion component should render 1`] = `
 </a>
 `;
 
+exports[`should render the negative case if is defined when condition evaluates to false 1`] = `
+<a
+  href="http://www.url.com"
+>
+  Link
+</a>
+`;
+
+exports[`should'nt render element after match case false 1`] = `
+<a
+  href="http://www.url.com"
+>
+  Link
+</a>
+`;
+
+exports[`should'nt render element after match case true 1`] = `
+<a
+  href="http://www.url.com"
+>
+  Link
+</a>
+`;
+
 exports[`shouldn't render anything when condition evaluates to false 1`] = `null`;
 
 exports[`the given component should be render when this paires condition evaluates to true 1`] = `

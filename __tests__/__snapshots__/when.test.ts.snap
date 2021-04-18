@@ -23,6 +23,27 @@ Array [
 ]
 `;
 
+exports[`should render all component wich paired condition evaluates to true and the alternates that matches with false 1`] = `
+Array [
+  <p>
+    ups somethings if wrong
+  </p>,
+  <a
+    href="http://www.url.com"
+  >
+    Link
+  </a>,
+  <a
+    href="http://www.url.com"
+  >
+    Link
+  </a>,
+  <p>
+    ups somethings if wrong
+  </p>,
+]
+`;
+
 exports[`shouldn't render anything when condition evaluates to false 1`] = `Array []`;
 
 exports[`the given component should be render when this paires condition evaluates to true 1`] = `

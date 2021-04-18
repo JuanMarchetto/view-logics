@@ -60,6 +60,47 @@ Array [
 ]
 `;
 
+exports[`should alternate element in case is false 1`] = `
+Array [
+  Array [
+    <p>
+      ups somethings if wrong
+    </p>,
+    <p>
+      ups somethings if wrong
+    </p>,
+    <p>
+      ups somethings if wrong
+    </p>,
+    <p>
+      ups somethings if wrong
+    </p>,
+    <p>
+      ups somethings if wrong
+    </p>,
+  ],
+  <a
+    href="http://www.url.com"
+  >
+    Link
+  </a>,
+  Array [
+    <p>
+      ups somethings if wrong
+    </p>,
+    <p>
+      ups somethings if wrong
+    </p>,
+    <p>
+      ups somethings if wrong
+    </p>,
+    <p>
+      ups somethings if wrong
+    </p>,
+  ],
+]
+`;
+
 exports[`shouldn't render anything when condition evaluates to false 1`] = `Array []`;
 
 exports[`the given component should be render when this paires condition evaluates to true 1`] = `

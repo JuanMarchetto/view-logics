@@ -39,3 +39,13 @@ test('should render all component wich paired condition evaluates to true', () =
   ]);
   expect(tree).toMatchSnapshot();
 });
+
+test('should render all component wich paired condition evaluates to true and the alternates that matches with false', () => {
+  const tree = when([
+      [true, otherComponent, component],
+      [false, otherComponent, component],
+      [false, otherComponent, component],
+      [true, otherComponent, component],
+  ]);
+  expect(tree).toMatchSnapshot();
+});
