@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`the given component should be render when this paires condition evaluates to true 1`] = `
+<a
+  href="http://www.url.com"
+>
+  Link
+</a>
+`;
